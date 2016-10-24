@@ -1,0 +1,45 @@
+{
+  "name": "numbers-fun",
+  "version": "1.0.0",
+  "description": "simple react and express app with numbers trivia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --hot --progress --colors",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LynnFleck/Numbers-Fun.git"
+  },
+  "keywords": [
+    "numbers",
+    "trivia",
+    "math"
+  ],
+  "author": "Lynn Fleck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LynnFleck/Numbers-Fun/issues"
+  },
+  "homepage": "https://github.com/LynnFleck/Numbers-Fun#readme",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "superagent": "^2.3.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1"
+  }
+}
