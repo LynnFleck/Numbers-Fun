@@ -1,6 +1,25 @@
+/******************* F O N T S ***************************/
+/*
+font-family: 'Special Elite', cursive;
+*/
+/*********************************************************/
 body {
-  background:  lightcoral;
+  background-image: url(../images/chalkboard.jpg);
+  background-size: cover;
+  background-position: 50%;
+  font-family: 'Special Elite', cursive;
+  color: rgba(255,255,255,.6);
+  text-align: center;
 }
+#container {
+  display: flex;
+}
+
+.item {
+  flex-grow: 1;
+  border:  1px solid red;
+}
+
 .clearfix:after {
    visibility: hidden;
    display: block;

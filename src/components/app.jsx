@@ -5,7 +5,7 @@ import NumbersAppearance from './numbersAppearance.jsx';
 const App = () => {
   return(
     <div>
-      <h1>Fun with Numbers</h1>
+      <h1>What's your Number?</h1>
       <NumbersAppearance />
     </div>
       );

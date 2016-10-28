@@ -12,9 +12,14 @@ class NumbersAppearance extends Component {
       data: {},
     };
     this.getMathTrivia = this.getMathTrivia.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+
   }
   getMathTrivia() {
-    request.get(`http://numbersapi.com/${this.state.digits}/math?fragment=true&json=true`)
+    const Url = `http://numbersapi.com/${this.state.digits}/math?fragment=true&json=true`;
+    console.log(Url);
+    request.get(Url)
       .then((data) => {
         this.setState({
           data: data.body,
@@ -27,6 +32,7 @@ class NumbersAppearance extends Component {
   }
 
   handleChange(e) {
+    e.preventDefault();
     const newDigits = e.target.value;
     this.setState({ digits: newDigits });
   }
@@ -36,9 +42,7 @@ class NumbersAppearance extends Component {
   render() {
     return (
       <div>
-        <h1>This is the NumbersAppearance component </h1>
         <form id="digits-box">
-          <h1>DIGITS</h1>
           <input
             name="digits"
             onChange={this.handleChange}
@@ -53,7 +57,7 @@ class NumbersAppearance extends Component {
           </button>
         </form>
         <p>{this.state.digits} is {this.state.data.text}</p>
-        <p>number is {this.state.data.number}</p>
+        <p>{this.state.data.number}</p>
         <p>type is {this.state.data.type}</p>
         <NumbersTrivia />
         <NumbersMath />
