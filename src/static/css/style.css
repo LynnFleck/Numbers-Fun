@@ -5,26 +5,39 @@ font-family: 'Special Elite', cursive;
 /*********************************************************/
 body {
   background-image: url(../images/chalkboard.jpg);
-  background-size: cover;
   background-position: 50%;
-  font-family: 'Special Elite', cursive;
+  background-size: cover;
   color: rgba(255,255,255,.6);
+  font-family: 'Special Elite', cursive;
   text-align: center;
 }
 #container {
-  display: flex;
+  border: 10px yellow solid;
 }
-
-.item {
-  flex-grow: 1;
-  border:  1px solid red;
-}
-
 .clearfix:after {
-   visibility: hidden;
-   display: block;
-   font-size: 0;
-   content: " ";
-   clear: both;
-   height: 0;
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+input.factNumber {
+  background: none;
+  color: rgba(255,255,255,.6);
+  font-size: 5em;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  text-align: center;
+  width: 300px;
+  display: block;
+}
+button.btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 15px 10px;
+}
+p.trivia {
+  font-size: 2em;
 }

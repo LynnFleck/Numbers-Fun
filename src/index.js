@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import NumbersApp from './components/numbersApp.jsx';
 
-import App from './components/app.jsx';
-
-ReactDOM.render( <App />, document.querySelector('#container'));
+ReactDOM.render(<NumbersApp />, document.querySelector('#root'));
