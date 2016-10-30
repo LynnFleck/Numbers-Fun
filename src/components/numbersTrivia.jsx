@@ -8,11 +8,10 @@ class NumbersTrivia extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-      digits: 1,
-      fact: 'the loneliest number'
+      digits: '',
+      fact: ''
     };
   }
-
   getMathFact() {
     const Url = `http://numbersapi.com/${this.state.digits}/trivia?fragment=true&json=true`;
     request.get(Url)
@@ -22,26 +21,27 @@ class NumbersTrivia extends React.Component {
         });
       });
   }
-
   handleChange(e) {
     const newDigits = e.target.value;
     this.setState({ digits: newDigits });
   }
-
   handleSubmit(e) {
     e.preventDefault();
     this.getMathFact();
   }
-
   render() {
+    const numberTrivia =
+      `${this.state.fact}` ?
+        `${this.state.digits} is ${this.state.fact}`
+        : '';
     return (
       <div className="item">
-        <h1>What's your favorite number?</h1>
+        <h1>Enter a number and get a fun fact</h1>
         <form id="digits-box">
           <input className="factNumber"
             name="digits"
             onChange={this.handleChange}
-            placeholder="enter a number"
+            placeholder="0"
             value={this.state.digits}
           />
           <button
@@ -50,7 +50,7 @@ class NumbersTrivia extends React.Component {
             Submit
           </button>
         </form>
-        <p className="trivia">{this.state.digits} is {this.state.fact}</p>
+        <p className="trivia">{numberTrivia}</p>
       </div>
     );
   };
